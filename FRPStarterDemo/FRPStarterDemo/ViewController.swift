@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController : UITextFieldDelegate{
+    func isFormValid() -> Bool {
+        return (usernameTextField.text?.characters.count )! > 0 &&
+                  (passwordTextField.text?.characters.count)! > 0
     }
-
-
+    
+    // Enable login button only if both the textfields have some value
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        loginButton.isEnabled = isFormValid()
+        return true
+    }
 }
 

@@ -7,6 +7,10 @@
 //
 
 import UIKit
+// FRP library for the swift language
+import ReactiveSwift
+// Extensions on Cocoacontrols such as textfields etc
+import ReactiveCocoa
 
 class ViewController: UIViewController {
 

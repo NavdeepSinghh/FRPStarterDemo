@@ -64,9 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="FSD-Pv-sy1" id="bVU-VI-Zgp"/>
-                        <outlet property="passwordField" destination="iVs-kR-8hz" id="WhN-zA-X9Y"/>
                         <outlet property="passwordTextField" destination="iVs-kR-8hz" id="uEH-dE-ybh"/>
-                        <outlet property="usernameField" destination="Wdx-eX-3Ik" id="EJE-HZ-GyJ"/>
                         <outlet property="usernameTextField" destination="Wdx-eX-3Ik" id="Bvw-XC-Zs9"/>
                     </connections>
                 </viewController>

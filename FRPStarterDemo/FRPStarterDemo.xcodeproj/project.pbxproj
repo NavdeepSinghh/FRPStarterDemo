@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8F403FF59BB6B266D92A16C /* Pods_FRPStarterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7E5BCE85E966A1545B7F76 /* Pods_FRPStarterDemo.framework */; };
 		F19334E71EF136630085C731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19334E61EF136630085C731 /* AppDelegate.swift */; };
 		F19334E91EF136630085C731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19334E81EF136630085C731 /* ViewController.swift */; };
 		F19334EC1EF136630085C731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19334EA1EF136630085C731 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE5144E1C2519EADDB6A619 /* Pods-FRPStarterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRPStarterDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FRPStarterDemo/Pods-FRPStarterDemo.release.xcconfig"; sourceTree = "<group>"; };
+		75B57137E3C167F46AAD4CA1 /* Pods-FRPStarterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRPStarterDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRPStarterDemo/Pods-FRPStarterDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CD7E5BCE85E966A1545B7F76 /* Pods_FRPStarterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRPStarterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19334E31EF136630085C731 /* FRPStarterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRPStarterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19334E61EF136630085C731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19334E81EF136630085C731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F403FF59BB6B266D92A16C /* Pods_FRPStarterDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		994A68E2A1E5B2A6915F9C0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75B57137E3C167F46AAD4CA1 /* Pods-FRPStarterDemo.debug.xcconfig */,
+				0EE5144E1C2519EADDB6A619 /* Pods-FRPStarterDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C050BC93D39E73BF0036BD95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E5BCE85E966A1545B7F76 /* Pods_FRPStarterDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F19334DA1EF136630085C731 = {
 			isa = PBXGroup;
 			children = (
 				F19334E51EF136630085C731 /* FRPStarterDemo */,
 				F19334E41EF136630085C731 /* Products */,
+				994A68E2A1E5B2A6915F9C0D /* Pods */,
+				C050BC93D39E73BF0036BD95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F19334F51EF136630085C731 /* Build configuration list for PBXNativeTarget "FRPStarterDemo" */;
 			buildPhases = (
+				83F0AB25EE7565B1646E55FF /* [CP] Check Pods Manifest.lock */,
 				F19334DF1EF136630085C731 /* Sources */,
 				F19334E01EF136630085C731 /* Frameworks */,
 				F19334E11EF136630085C731 /* Resources */,
+				5063CFAB12821B82B8B01A75 /* [CP] Embed Pods Frameworks */,
+				7628751516BC21C97A2DF9B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5063CFAB12821B82B8B01A75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRPStarterDemo/Pods-FRPStarterDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7628751516BC21C97A2DF9B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRPStarterDemo/Pods-FRPStarterDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F0AB25EE7565B1646E55FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F19334DF1EF136630085C731 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		F19334F61EF136630085C731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75B57137E3C167F46AAD4CA1 /* Pods-FRPStarterDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FRPStarterDemo/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		F19334F71EF136630085C731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EE5144E1C2519EADDB6A619 /* Pods-FRPStarterDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FRPStarterDemo/Info.plist;

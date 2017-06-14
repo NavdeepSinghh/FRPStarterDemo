@@ -21,21 +21,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameTextField.delegate = self
-        passwordTextField.delegate = self
+        // Checking for the valid user name and password : Signals
+        let validUsername = usernameTextField.reactive.continuousTextValues
+                                        .skipNil()
+                                        .map{ $0.characters.count > 0 }
+        let validPassword = passwordTextField.reactive.continuousTextValues
+                                        .skipNil()
+                                        .map{ $0.characters.count > 0 }
+        
+        // We can combine signals to act upon combined values
+        
+        Signal.combineLatest(validUsername, validPassword)
+            .observeValues{(isUsernameValid, isPasswordValid) in
+                self.loginButton.isEnabled = isUsernameValid && isPasswordValid
+        }
     }
 }
-
-extension ViewController : UITextFieldDelegate{
-    func isFormValid() -> Bool {
-        return (usernameTextField.text?.characters.count )! > 0 &&
-                  (passwordTextField.text?.characters.count)! > 0
-    }
-    
-    // Enable login button only if both the textfields have some value
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        loginButton.isEnabled = isFormValid()
-        return true
-    }
-}
-
+// No need for extensions 

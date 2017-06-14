@@ -31,10 +31,8 @@ class ViewController: UIViewController {
         
         // We can combine signals to act upon combined values
         
-        Signal.combineLatest(validUsername, validPassword)
-            .observeValues{(isUsernameValid, isPasswordValid) in
-                self.loginButton.isEnabled = isUsernameValid && isPasswordValid
-        }
+        loginButton.reactive.isEnabled <~ Signal.combineLatest(validUsername, validPassword)
+                                                                .map{ $0 && $1}
     }
 }
-// No need for extensions 
+// No need for extensions
